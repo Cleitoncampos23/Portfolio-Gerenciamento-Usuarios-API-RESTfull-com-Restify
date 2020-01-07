@@ -1,0 +1,24 @@
+Olá, boa tarde, tenho uma dúvida e preciso de ajuda. Seguinte: Na Seção 4: NodeJS - JavaScript no Back-End (no lado do servidor) na aula 75, quando o instalador é um validador expresso e, consequentemente, invoca ou arquiva, aparece a seguinte mensagem:
+
+
+
+TypeError: expressValidator não é uma função
+
+    no objeto. <anônimo> (C: \ Usuários \ Kaue \ desktop \ Restful \ principal.js: 11: 9)
+
+    em Module._compile (internal / modules / cjs / loader.js: 959: 30)
+
+    em Object.Module._extensions..js (internal / modules / cjs / loader.js: 995: 10)
+
+    em Module.load (internal / modules / cjs / loader.js: 815: 32)
+
+    em Function.Module._load (internal / modules / cjs / loader.js: 727: 14)
+
+    em Function.Module.runMain (internal / modules / cjs / loader.js: 1047: 10)
+
+    em internal / main / run_main_module.js: 17: 11
+
+
+    PARA RESOLVER ESSE ERRO, EXECUTE O SEGUINTE COMANDO NO TERMINAL:
+
+    -- > : npm install express-validator@5.3.1 --save-exact
