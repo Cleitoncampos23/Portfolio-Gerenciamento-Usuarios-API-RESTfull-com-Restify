@@ -1,0 +1,65 @@
+                            Aula usando restify para acessar a API
+
+1 Nessa aula aprenderemos a consumir uma Restfull API com o restify.
+1.1 O restify é um framework nodeJs muito robusto que conequita sua aplicação com
+a Restfull API do servidor.
+
+2 Passo a Passo
+
+2.1 fazer o dowload do restify
+2.1.1 execute o seguinte comando via terminal: npm install restify-clients --save
+2.2 acessando a rota user.js da pasta routes dentro da pasta projeto-restapi, declare o seguinte trecho 
+de codigo:
+
+2.3 
+
+var restify = require('restify-clients'); serve para importar o modulo baixado do restify para esse arquivo users
+
+2.4 Em seguida, conequite o restify com o servidor localhost:4000 com o seguinte trecho de codigo:
+
+var client = restify.createJSONClient({
+
+    url: 'http:// localhost:4000'
+});
+
+
+2.5 solicitação GET
+
+client.basicAuth('$login', '$password'); - > Esse é a autenticação de usuário caso ele acesse uma rota especifica.
+
+Abaixo segue a solicitação GET pra uma rota da Restfull API
+
+client.get('/my/machines', function(err, req, res, obj) {
+  assert.ifError(err);
+
+  console.log(JSON.stringify(obj, null, 2));
+
+});
+
+
+                RESUMO DA AULA DE restify
+
+1Fazer dowload do restify na pasta do projeto (client-server)
+1.1 importar o modulo baixado do restify no arquivo users da pasta routes que está na pasta client-server dessa forma:
+
+var restify = require('restify-clients');
+var assert = require('assert');
+1.2 conequita a restify a aplicação com a Restfull API, por meio do seguinte codigo;
+
+var client = restify.createJsonClient({
+
+  url: 'https://us-east-1.api.joyent.com' -- > Essa é a url que coneca o servido da porta 4000, a Restfull API.
+
+});
+
+2 Em seguida no mesmo arquivo adicionar o seguinte codigo:
+
+
+client.get('/users, function(err, req, res, obj) {
+
+
+  assert.ifError(err);
+
+  res.end(JSON.stringify(obj, null, 2)); ---> vai devolver ao usuário um objeto JSON.
+
+});

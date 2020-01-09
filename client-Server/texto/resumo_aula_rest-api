@@ -1,0 +1,50 @@
+                            Revisão da Aula Rest API
+
+O que é uma Rest API ?
+Rest API é uma forma de consumir rotas e métodos diferentes, método GET, Post, Put e Delete.
+Na aula passada, com o projeto de Rest API terminado aprendemos a criar e acessar um banco de (dados)
+arquivos em formato JSON, o NeDB, no entanto, poderia ser usado qualquer banco de dados, que já conhecemos,
+como por exemplo: o MySQL.
+aprendemos também a criar um servidor web em nodeJs na mão, depois, criamos o mesmo servidor só que dessa vez
+utilizando um framework nodeJs muito conhecido chamado express, utilizamos também, alguns módulos que foram 
+necessário acoplar ao nosso projeto, são eles:
+
+* Modulo express
+* Modulo Body-Parser
+* Modulo Consign
+* Modulo Express-Validator
+
+                            Arquitetura Restfull
+
+De acordo com a imagem de arquitetura Restfull, a aplicação (arqquivos html, css e js) será disponibilizada
+pelo servidor cliente que será responsável por mandar o site para o usuário de acordo com a porta configura,
+a porta localhost:3000.
+É importante lembrar que é chamado de servidor cliente o servidor que disponibiliza uma aplicação web para o usuário
+final e, ao mesmo tempo, consome dados via Rest API de outro servidor.
+Um exemplo claro disso, é um usuário que acessa um site de seu computador no Brasil cuja hospedagem desse site esteja em um servidor no méxico e,
+essse servidor no méxico consome dados via Rest API de um outro servidor, que está nos Estados Unidos, buscando dados para devolver
+a resposta da requisição ao usuário final, ou seja, o usuário que fez a solicitação pelo site.
+
+localhost: 3000 disponibilizará a aplicação - site
+localhost: 4000 é o servidor, banco de dados que irá consumir a Rest API.
+
+                        Começando um novo projeto
+
+1 Crie uma pasta chamada Projeto-Node-Cliente-Server                        
+1.1 baixe o projeto do repositório da hcode, o projeto gerenciamento de usuário caso não tenha feito esse projeto.
+1.2 Adicione o projeto baixado na pasta do Projeto-Node-Cliente-Server.
+1.3 Abra o arquivo index.html desse projeto, caso o template adminLte esteja desatualizado, atualize utilizando o Comando:
+npm install -g bower que vai baixar as atualizações bower desse projeto.
+1.3 em seguida, execute na pasta do projeto que contem o template adminLte o seguinte comando via terminal git:
+npm bower install.
+1.4 Verifique no navegador se o template foi atualizado.
+
+2 Utilize o projeto Restfull API
+2.1 Acesse a pasta desse projeto, acesse também o arquivo users.js que está dentro da pasta routes, e configure a porta localhost para localhost: 4000
+2.2 rode o servidor e verifique se o servidor está funcionando nessa porta.
+
+3 Dentro da pasta Projeto-Node-Cliente-Server execute o seguinte comando para criar a extrutura do novo projeto:
+npm install express-generator -g para criar as pastas principais do express, um verdadeiro bolierplate.
+3.1 Em seguida utilize o seguinte  comando: express -H que irá abrir um terminal com algumas opções de escolha.
+3.2 Após abrir o terminal utilize o seguinte comando: express --ejs para escolher a engine de template do ejs
+3.1 execute também: npm install.
