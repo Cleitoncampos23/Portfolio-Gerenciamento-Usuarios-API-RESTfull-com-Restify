@@ -1,0 +1,18 @@
+ajax - Assincrono javascript and XML
+
+Um exemplo de requisição Assincrona em  javascript :
+Quando o usuário acessa um site e esse site redireciona o mesmo para
+uma determinada página, esse processo é chamado de processo Assincrono do
+qual o usuário não teve controle.
+
+O que é processo sincrono ?
+É o processo de interação do usuário com o o site.
+Um exemplo: envio de formulário.
+
+XHR - Significa XMLhttpRequesst
+
+Quando foi criado o ajax, no mercado o XML era um padrão de comunicação
+aceito para comunicação duas plataformas.
+
+Na solicitação ajax dessa aula, o javascript faz uma conexão via ajax 
+com o servidor NeDB para buscar as informações e em seguida devolver a página.
