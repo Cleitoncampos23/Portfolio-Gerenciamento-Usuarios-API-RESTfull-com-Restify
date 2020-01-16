@@ -52,7 +52,7 @@ class HttpRequest {
                     console.error(e);
                 }
 
-                resolve(obj)
+                resolve(obj);
             };
 
             ajax.setRequestHeader('Content-Type','application/json');
