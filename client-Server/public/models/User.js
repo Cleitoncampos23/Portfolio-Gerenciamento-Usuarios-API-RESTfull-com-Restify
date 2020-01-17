@@ -90,7 +90,7 @@ class User {
 
         Object.keys(this).forEach(key => {
 
-            if(this[key] !== undefined) json [key] = this[key];
+            if(this[key] !== undefined) json[key] = this[key];
 
         });
 
@@ -129,8 +129,6 @@ class User {
             });
 
         });
-
-       
     }
 
     remove(){

@@ -36,7 +36,7 @@ class HttpRequest {
 
 
                 reject(e);
-            }
+            };
 
             ajax.onload = event => {
 
@@ -50,7 +50,7 @@ class HttpRequest {
 
                     reject(e);
                     console.error(e);
-                }
+                };
 
                 resolve(obj);
             };
