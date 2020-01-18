@@ -1,37 +1,33 @@
 class HttpRequest {
 
-    static get(url, params = {}){
+        static get(url, params = {}){
 
-        return HttpRequest.request('GET', url, params);
-    }
+           return HttpRequest.request('GET', url, params);
+        }
+        static delete(url, params = {}){
 
-    static delete(url, params = {}){
+            return HttpRequest.request('DELETE', url, params);
+         }
 
-        return HttpRequest.request('DELETE', url, params);
-    }
+         static put(url, params = {}){
 
-    static put(url, params = {}){
+            return HttpRequest.request('PUT', url, params);
+         }
 
-        return HttpRequest.request('PUT', url, params);
-    }
+         static post(url, params = {}){
 
-    static post(url, params = {}){
-
-        return HttpRequest.request('POST', url, params);
-    }
-
-   
+            return HttpRequest.request('POST', url, params);
+         }
 
 
-    static request(method, url, params = {}){
-        //let users = User.getUsersStorage();
+         static request(method, url, params = {}){
 
         return new Promise((resolve, reject)=>{
 
             let ajax = new XMLHttpRequest();
 
             ajax.open(method.toUpperCase(), url);
-
+    
             ajax.onerror = event => {
 
 
@@ -39,26 +35,28 @@ class HttpRequest {
             };
 
             ajax.onload = event => {
-
-                let obj = { };
-
+    
+                let obj = {};
+    
                 try {
-
-                     obj = JSON.parse(ajax.responseText);
-
+    
+                    obj = JSON.parse(ajax.responseText);
+    
+    
                 } catch(e){
-
+    
                     reject(e);
                     console.error(e);
-                };
+                }
 
                 resolve(obj);
-            };
+                
+            }
 
-            ajax.setRequestHeader('Content-Type','application/json');
+            ajax.setRequestHeader('Content-Type','application/json')
+
             ajax.send(JSON.stringify(params));
-
         });
-        
     }
+
 }

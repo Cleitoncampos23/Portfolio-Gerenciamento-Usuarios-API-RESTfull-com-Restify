@@ -57,7 +57,7 @@ router.put('/:id', function(req, res, next) {
 
 router.delete('/:id', function(req, res, next) {
 
-  client.delete(`/users/${req.params.id}` ,function(err, request, response, obj) {
+  client.del(`/users/${req.params.id}`, function(err, request, response, obj) {
 
     assert.ifError(err);
   

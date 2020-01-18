@@ -102,7 +102,6 @@ class User {
 
         return new Promise((resolve, reject) =>{
 
-
             let promise;
 
             if (this.id){
